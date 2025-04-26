@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wikipedia - U Shape Language Layout</title>
+
+    <!-- CSS Styles -->
+    <style>
+        /* Body Style */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Center Content */
+        .center-content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* U-shape Layout */
+        .u-shape {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 40px;
+        }
+
+        /* Left and Right Languages */
+        .languages.left,
+        .languages.right {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Bottom Languages */
+        .languages.bottom {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Each Language */
+        .lang {
+            font-size: 1.3em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px black;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+            line-height: 1.4;
+        }
+
+        .lang small {
+            display: block;
+            font-size: 0.8em;
+            font-weight: normal;
+            color: #ddd;
+            margin-top: 4px;
+        }
+
+        /* Globe Image */
+        .globe-container {
+            text-align: center;
+        }
+
+        .globe {
+            width: 200px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+        }
+
+        /* Hover Effect */
+        .lang:hover {
+            transform: scale(1.1);
+            color: #00bfff;
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 15px;
+            font-size: 1.2em;
+            width: 400px;
+            border-radius: 8px;
+        }
+
+        .search-container button {
+            padding: 15px 20px;
+            font-size: 1.2em;
+            background-color: #00bfff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-container button:hover {
+            background-color: #009acd;
+        }
+
+        /* Footer Section */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+            background-color: #4764a2;
+            color: white;
+        }
+
+        .footer-item {
+            text-align: center;
+        }
+
+        .footer-item img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Center Content -->
+    <div class="center-content">
+        <h1>Wikipedia</h1>
+        <p>The Free Encyclopedia</p>
+
+        <!-- U-shape Layout -->
+        <div class="u-shape">
+            <!-- Left Languages -->
+            <div class="languages left">
+                <div class="lang">English<br><small>6,974,000+ articles</small></div>
+                <div class="lang">Español<br><small>2,021,000+ artículos</small></div>
+                <div class="lang">Deutsch<br><small>3,001,000+ Artikel</small></div>
+            </div>
+
+            <!-- Globe Image in the Center -->
+            <div class="globe-container">
+                <img class="globe"
+                    src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2@1.5x.png"
+                    alt="Wikipedia Globe">
+            </div>
+
+            <!-- Right Languages -->
+            <div class="languages right">
+                <div class="lang">Русский<br><small>2,036,000+ статей</small></div>
+                <div class="lang">Français<br><small>2,674,000+ articles</small></div>
+                <div class="lang">Português<br><small>1,146,000+ artigos</small></div>
+            </div>
+        </div>
+
+        <!-- Bottom Languages -->
+        <div class="languages bottom">
+            <div class="lang">日本語<br><small>1,457,000+ 記事</small></div>
+            <div class="lang">中文<br><small>1,470,000+ 条目</small></div>
+            <div class="lang">Italiano<br><small>1,910,000+ voci</small></div>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <form id="searchForm">
+            <input type="text" name="search" id="searchInput" placeholder="Search and press the button" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+
+        <!-- Footer Item: Commons -->
+        <div class="footer-item">
+            <img src="https://commons.wikimedia.org/static/images/icons/commonswiki.svg" alt="Commons">
+            <p><strong>Commons</strong><br>Free media collection</p>
+        </div>
+
+        <!-- Footer Item: Wikivoyage -->
+        <div class="footer-item">
+            <img src="https://www.wikivoyage.org/portal/wikivoyage.org/assets/img/Wikivoyage-logo-tiles_1.5x.png"
+                alt="Wikivoyage">
+            <p><strong>Wikivoyage</strong><br>Free travel guide</p>
+        </div>
+
+        <!-- Footer Item: Wiktionary -->
+        <div class="footer-item">
+            <img src="https://www.wiktionary.org/portal/wiktionary.org/assets/img/Wiktionary-logo-tiles_1.5x.png"
+                alt="Wiktionary">
+            <p><strong>Wiktionary</strong><br>Free dictionary</p>
+        </div>
+
+        <!-- Footer Item: Wikibooks -->
+        <div class="footer-item">
+            <img src="https://www.wikibooks.org/portal/wikibooks.org/assets/img/Wikibooks-logo-tiles_1.5x.png"
+                alt="Wikibooks">
+            <p><strong>Wikibooks</strong><br>Free textbooks</p>
+        </div>
+
+        <!-- Footer Item: Wikinews -->
+        <div class="footer-item">
+            <img src="https://www.wikinews.org/portal/wikinews.org/assets/img/Wikinews-logo-tiles_1.5x.png"
+                alt="Wikinews">
+            <p><strong>Wikinews</strong><br>Free news source</p>
+        </div>
+
+        <!-- Footer Item: Wikidata -->
+        <div class="footer-item">
+            <img src="https://www.wikidata.org/static/images/icons/wikidatawiki.svg" alt="Wikidata">
+            <p><strong>Wikidata</strong><br>Free knowledge base</p>
+        </div>
+
+        <!-- Footer Item: Wikiversity -->
+        <div class="footer-item">
+            <img src="https://www.wikiversity.org/portal/wikiversity.org/assets/img/Wikiversity-logo-tiles_1.5x.png"
+                alt="Wikiversity">
+            <p><strong>Wikiversity</strong><br>Free learning resources</p>
+        </div>
+
+        <!-- Footer Item: Wikiquote -->
+        <div class="footer-item">
+            <img src="https://www.wikiquote.org/portal/wikiquote.org/assets/img/Wikiquote-logo-tiles_1.5x.png"
+                alt="Wikiquote">
+            <p><strong>Wikiquote</strong><br>Free quote compendium</p>
+        </div>
+
+        <!-- Footer Item: MediaWiki -->
+        <div class="footer-item">
+            <img src="https://www.mediawiki.org/static/images/icons/mediawikiwiki.svg" alt="MediaWiki">
+            <p><strong>MediaWiki</strong><br>Free & open wiki software</p>
+        </div>
+
+        <!-- Footer Item: Wikisource -->
+        <div class="footer-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wikisource-logo.png/330px-Wikisource-logo.png"
+                alt="Wikisource">
+            <p><strong>Wikisource</strong><br>Free content library</p>
+        </div>
+
+        <!-- Footer Item: Wikispecies -->
+        <div class="footer-item">
+            <img src="https://species.wikimedia.org/static/images/icons/specieswiki.svg" alt="Wikispecies">
+            <p><strong>Wikispecies</strong><br>Free species directory</p>
+        </div>
+
+        <!-- Footer Item: Wikifunctions -->
+        <div class="footer-item">
+            <img src="https://www.wikifunctions.org/static/images/icons/wikifunctionswiki.svg" alt="Wikifunctions">
+            <p><strong>Wikifunctions</strong><br>Free function library</p>
+        </div>
+
+        <!-- Footer Item: Meta-Wiki -->
+        <div class="footer-item">
+            <img src="https://meta.wikimedia.org/static/images/icons/metawiki.svg" alt="Meta-Wiki">
+            <p><strong>Meta-Wiki</strong><br>Community coordination & documentation</p>
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+
+        // Stop Enter key from submitting the form directly
+        searchInput.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Stop the form from submitting
+            }
+        });
+
+        // Only submit when clicking the Search button
+        searchForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop default form submit
+            const query = searchInput.value.trim();
+            if (query) {
+                window.open(`https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(query)}`, '_blank');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
